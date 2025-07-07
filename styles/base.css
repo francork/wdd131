@@ -1,0 +1,211 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Playfair+Display:wght@700&display=swap');
+
+:root {
+  --primary-color: #183b59;
+  --secondary-color: #fcdc58;
+  --accent-color: #e63946;
+  --link-hover: #f1c40f;
+  --background-color: #f4f4f4;
+  --card-border: #ccc;
+  --text-color: #333;
+  --nav-bg: #2c2c2c;
+  --header-font: 'Playfair Display', serif;
+  --body-font: 'Open Sans', sans-serif;
+}
+
+body {
+  margin: 0;
+  font-family: var(--body-font);
+  color: var(--text-color);
+  background-color: var(--background-color);
+}
+
+/* Header */
+header {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 1rem 0;
+  text-align: center;
+}
+
+#course-title {
+  display: block;
+  font-family: var(--header-font);
+  font-size: 1.5rem;
+}
+
+#course-title span {
+  color: var(--secondary-color);
+  font-weight: bold;
+}
+
+/* Navigation */
+nav {
+  background-color: var(--nav-bg);
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0.5rem 1rem;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+nav li {
+  margin: 0;
+  padding: 0;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease, border-bottom 0.3s ease;
+  padding-bottom: 2px;
+}
+
+nav a:hover,
+nav a:focus {
+  color: var(--link-hover);
+  border-bottom: 2px solid var(--link-hover);
+  outline: none;
+}
+
+nav a:focus-visible {
+  outline: 2px solid var(--link-hover);
+  outline-offset: 2px;
+}
+
+/* Main layout */
+main {
+  max-width: 960px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: 2fr 1fr;
+}
+
+/* Cards */
+.card {
+  background-color: white;
+  border: 1px solid var(--card-border);
+  border-radius: 8px;
+  padding: 1.5rem;
+}
+
+.card h2 {
+  background-color: var(--primary-color);
+  color: white;
+  font-size: 1.25rem;
+  padding: 0.5rem;
+  text-align: center;
+  border-radius: 5px 5px 0 0;
+  margin: -1.5rem -1.5rem 1rem;
+}
+
+.card p {
+  margin-bottom: 1rem;
+}
+
+/* Custom layout for about-me section */
+.card.about-me {
+  display: grid;
+  grid-template-columns: 1fr 300px;
+  gap: 1.5rem;
+  align-items: start;
+  max-width: 700px;  /* limits total width */
+  margin: 0 auto;    /* centers section */
+}
+
+/* Personal photo */
+.card.about-me > div:last-child img {
+  width: 50%;
+  max-width: 300px;
+  height: auto;
+  display: block;
+  margin: 1rem auto;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+/* Flag or landscape image */
+.card.about-me .flag {
+  margin-top: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card.about-me .flag img {
+  width: 100%;
+  max-width: 350px;  /* limit size */
+  height: auto;
+  border-radius: 6px;
+  display: block;
+  margin: 0 auto;  /* center horizontally */
+}
+
+.card.about-me .flag figcaption {
+  font-size: 0.85rem;
+  color: #555;
+  text-align: center;
+  margin-top: 0.3rem;
+}
+
+/* Resource links */
+.card ul {
+  list-style: none;
+  padding-left: 1rem;
+}
+
+.card ul li a {
+  color: #3a0ca3;
+  text-decoration: none;
+}
+
+.card ul li a:hover,
+.card ul li a:focus {
+  text-decoration: underline;
+  color: #7209b7;
+  outline: none;
+}
+
+.card ul li a:focus-visible {
+  outline: 2px solid #7209b7;
+  outline-offset: 2px;
+}
+
+/* Footer */
+footer {
+  background-color: var(--primary-color);
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+}
+
+footer p {
+  margin: 0.3rem;
+}
+
+#lastModified {
+  color: var(--secondary-color);
+}
+
+/* Responsive for small screens */
+@media (max-width: 600px) {
+  main {
+    grid-template-columns: 1fr;
+  }
+  .card.about-me {
+    grid-template-columns: 1fr;
+  }
+  .card.about-me > div:last-child img {
+    width: 70%;
+    max-width: none;
+  }
+}

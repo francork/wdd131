@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>WDD 131 – Dynamic Web Fundamentals – Franco Rengifo</title>
+  <meta name="description" content="WDD 131 – Dynamic Web Fundamentals. Franco Rengifo. Personal bio and web development resources." />
+  <meta name="author" content="Franco Rengifo" />
+  <link rel="stylesheet" href="styles/base.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet" />
+  <script src="getdates.js" defer></script>
+</head>
+<body>
+  <header>
+    <span id="course-title">WDD 131: Dynamic Web Fundamentals - <span>Franco Rengifo</span></span>
+    <nav aria-label="Primary navigation">
+      <ul>
+        <li><a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+        <li><a href="https://byupw.instructure.com/" target="_blank" rel="noopener noreferrer">Canvas</a></li>
+        <li><a href="https://www.churchofjesuschrist.org/study/scriptures/" target="_blank" rel="noopener noreferrer">Scripture</a></li>
+        <li><a href="#" aria-current="page">Final Project</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Left card -->
+    <section class="card about-me">
+      <div>
+        <h2>About Me</h2>
+        <p>Hi, I'm Franco. I love building websites and playing fútbol with my friends. I'm currently studying software development and enjoy learning new technologies.</p>
+
+        <h3>Fútbol Moments</h3>
+        <p>This photo captures a moment from a recent game. I play 3 times a week and love staying active.</p>
+
+        <figure class="flag">
+          <img src="images/futbol1.jpg" alt="Fútbol game moment" />
+          <figcaption>Fútbol is life ⚽</figcaption>
+        </figure>
+      </div>
+
+      <div>
+        <img src="images/francopic.png" alt="Franco's Photo" />
+      </div>
+    </section>
+
+    <!-- Right card -->
+    <section class="card">
+      <h2>Web Dev Resources</h2>
+      <ul>
+        <li><a href="https://dev.to/" target="_blank" rel="noopener noreferrer">Dev.to Community</a></li>
+        <li><a href="https://www.smashingmagazine.com/" target="_blank" rel="noopener noreferrer">Smashing Magazine</a></li>
+        <li><a href="https://css-tricks.com/" target="_blank" rel="noopener noreferrer">CSS Tricks</a></li>
+        <li><a href="https://www.w3schools.com/" target="_blank" rel="noopener noreferrer">W3 Schools</a></li>
+        <li><a href="https://www.udemy.com/" target="_blank" rel="noopener noreferrer">Udemy</a></li>
+        <li><a href="https://placeholder.com/" target="_blank" rel="noopener noreferrer">Image Placeholder</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="currentyear"></span> Franco Rengifo, Argentina</p>
+    <p id="lastModified"></p>
+  </footer>
+  <script>
+    document.getElementById('currentyear').textContent = new Date().getFullYear();
+    document.getElementById('lastModified').textContent = "Last Modification: " + document.lastModified;
+  </script>
+</body>
+</html>
